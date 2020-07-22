@@ -7,7 +7,7 @@ func main() {
 	
 	foo()
 	
-	fmt.Println("something more")
+	fmt.Println("starting a loop")
 
 	for i := 0; i < 100; i++ {
 		if i%2 == 0 {
@@ -15,7 +15,26 @@ func main() {
 		}
 	}
 
+	// Use the "_" character to omitt any returned values you do not intend to use
+	// In GO you have to use all of the declared variables. "_" allows to ignore values you do not intend to use.
+	n, _ := fmt.Println("Hello, playground", 42, true)
+	fmt.Println(n)
+
 	bar()
+	
+	// Short declaration operator
+	x := 42
+	fmt.Println("x is defined and given a value of", x)
+	// Variable reassignment
+	x = 99
+	fmt.Println("x is reassigned to the value of", x)
+
+	y := "James Bond"
+	fmt.Println("Bond,", y)
+	
+	// Statements 
+	z := 100 + 24
+	fmt.Println(z)
 }
 
 func foo() {
